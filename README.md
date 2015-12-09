@@ -1,2 +1,4 @@
 # dropbox-database-backup
-Automatically backup your openshift database to dropbox
+Realize backups automáticos de seu banco de dados do Openshift em sua conta Dropbox
+
+Instruções em https://getupcloud.com/blog/usando-dropbox-para-backup
