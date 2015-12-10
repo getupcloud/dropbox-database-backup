@@ -17,7 +17,7 @@ ACTION='scl enable python27 "$OPENSHIFT_REPO_DIR/.openshift/backup-dropbox-wrapp
 # Don't need to touch below
 #####################################################
 
-set -eu
+set -e
 
 if [ ! -d "$BACKUP_DIR" ]; then
     mkdir -p "$BACKUP_DIR"
