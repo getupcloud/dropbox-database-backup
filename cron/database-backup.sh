@@ -106,8 +106,8 @@ function backup_mongodb()
 if [ "${OPENSHIFT_MYSQL_DB_HOST}${OPENSHIFT_POSTGRESQL_DB_HOST}${OPENSHIFT_MONGODB_DB_HOST}" ]; then
     info "--- Backup start - [`date`]\n"
     remove_old_backup $BACKUP_DIR
-    [ "${OPENSHIFT_MYSQL_DB_HOST}"      ] && backup_mysql
-    [ "${OPENSHIFT_POSTGRESQL_DB_HOST}" ] && backup_postgresql
-    [ "${OPENSHIFT_MONGODB_DB_HOST}"    ] && backup_mongodb
+    [ "${OPENSHIFT_MYSQL_DB_HOST}"      ] && backup_mysql || true
+    [ "${OPENSHIFT_POSTGRESQL_DB_HOST}" ] && backup_postgresql || true
+    [ "${OPENSHIFT_MONGODB_DB_HOST}"    ] && backup_mongodb || true
     info "\n--- Backup finished [`date`]"
 fi
